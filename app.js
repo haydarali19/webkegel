@@ -604,17 +604,17 @@ function initStationeryQuiz() {
     scoreDisplay.textContent = `${percentage}%`;
 
     if (percentage === 100) {
-      badgeReward.textContent = 'Pemahaman Sempurna (100%)';
-      resultMessage.textContent = 'Bagus sekali, Bunda! Seluruh konsep pencegahan kebocoran urine dan teknik senam Kegel yang aman telah dipahami dengan tepat. Praktikkan senam ini secara teratur 2–3 kali sehari di rumah.';
+      badgeReward.textContent = 'Luar Biasa, Bunda Paham Sepenuhnya!';
+      resultMessage.textContent = 'Keren sekali, Bunda! Semua prinsip dasar panggul dan teknik latihan yang aman sudah Bunda kuasai. Sekarang tinggal menjadikannya kebiasaan kecil yang menyenangkan setiap hari di rumah.';
     } else if (percentage >= 80) {
-      badgeReward.textContent = 'Pemahaman Sangat Baik';
-      resultMessage.textContent = 'Bagus sekali! Bunda sudah memahami prinsip dasar kesehatan panggul dan cara latihan yang benar. Pertahankan kebiasaan baik ini setiap hari.';
+      badgeReward.textContent = 'Pemahaman Bunda Sudah Bagus Sekali';
+      resultMessage.textContent = 'Bagus sekali! Bunda sudah menguasai poin-poin terpenting dalam menjaga kesehatan panggul. Sedikit kekeliruan tadi wajar sekali, jadikan catatan ini pedoman saat mulai latihan mandiri ya.';
     } else if (percentage >= 60) {
-      badgeReward.textContent = 'Pemahaman Cukup Baik';
-      resultMessage.textContent = 'Bunda sudah memahami poin-poin utamanya. Luangkan waktu sejenak untuk membaca kembali bab anjuran dan pantangan agar gerakan Bunda semakin tepat.';
+      badgeReward.textContent = 'Sudah di Jalur yang Tepat';
+      resultMessage.textContent = 'Bunda sudah menangkap gambaran utamanya. Luangkan waktu 2 menit untuk membaca kembali bab Anjuran & Pantangan agar latihan Bunda semakin mantap dan bebas ragu.';
     } else {
-      badgeReward.textContent = 'Perlu Dipelajari Kembali';
-      resultMessage.textContent = 'Tidak apa-apa, Bun. Silakan baca kembali bab panduan gerakan dan gambar anatomi panggul, lalu ulangi kuis ini kapan saja.';
+      badgeReward.textContent = 'Yuk, Baca Santai Sekali Lagi';
+      resultMessage.textContent = 'Tidak apa-apa, Bun! Namanya juga belajar hal baru tentang tubuh sendiri. Silakan intip kembali gambar anatomi dan panduan gerakan, lalu coba kuis ini lagi kapan saja ya.';
     }
   }
 
