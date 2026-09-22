@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ruang Panggul Ibu | Panduan Mandiri Senam Kegel Trimester 2 & 3</title>
+  <meta name="description" content="Website edukasi mandiri pelatihan otot dasar panggul (senam Kegel) untuk mencegah kebocoran urine pada ibu hamil. Dilengkapi timer latihan dan kuis evaluasi.">
+  
+  <!-- Typography: Newsreader (Warm Editorial Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Unified Sticky Header & Chapter Nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#beranda" class="brand-wrapper" data-target-tab="beranda">
+        <div class="brand-emblem">
+          <!-- Refined Botanical Cradle Icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 21a9 9 0 0 1-9-9c0-3.5 2-6.5 5-8" stroke="#3D5A4C"/>
+            <path d="M12 21a9 9 0 0 0 9-9c0-3.5-2-6.5-5-8" stroke="#3D5A4C"/>
+            <path d="M5 13.5c2.5 3.5 5 4.5 7 4.5s4.5-1 7-4.5" stroke="#B4566B" stroke-width="2.2"/>
+            <circle cx="12" cy="9.5" r="2.5" fill="#3D5A4C"/>
+          </svg>
+        </div>
+        <div class="brand-title">
+          <h1>Ruang Panggul Ibu</h1>
+          <span>Panduan Mandiri Senam Kegel Kehamilan</span>
+        </div>
+      </a>
+      
+      <div class="header-action">
+        <a href="#latihan" class="btn-header-timer" data-target-tab="latihan">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          Mulai Latihan
+        </a>
+      </div>
+    </div>
+
+    <!-- Chapter Navigation Bar terpadu di dalam header -->
+    <nav class="chapter-nav-wrapper" aria-label="Daftar Bab Edukasi">
+      <div class="container">
+        <ul class="chapter-nav-list">
+          <li>
+            <button type="button" class="chapter-nav-item active" data-tab="beranda">
+              <span class="chapter-num">01</span> Beranda
+            </button>
+          </li>
+          <li>
+            <button type="button" class="chapter-nav-item" data-tab="inkontinensia">
+              <span class="chapter-num">02</span> Inkontinensia
+            </button>
+          </li>
+          <li>
+            <button type="button" class="chapter-nav-item" data-tab="anatomi">
+              <span class="chapter-num">03</span> Anatomi
+            </button>
+          </li>
+          <li>
+            <button type="button" class="chapter-nav-item" data-tab="kegel">
+              <span class="chapter-num">04</span> Senam Kegel
+            </button>
+          </li>
+          <li>
+            <button type="button" class="chapter-nav-item" data-tab="latihan">
+              <span class="chapter-num">05</span> Ruang Latihan <span class="nav-badge">Timer</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="chapter-nav-item" data-tab="tips">
+              <span class="chapter-num">06</span> Tips &amp; Pantangan
+            </button>
+          </li>
+          <li>
+            <button type="button" class="chapter-nav-item" data-tab="kuis">
+              <span class="chapter-num">07</span> Evaluasi <span class="nav-badge">Kuis</span>
+            </button>
+          </li>
+          <li>
+            <button type="button" class="chapter-nav-item" data-tab="referensi">
+              <span class="chapter-num">08</span> Kepustakaan
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         BAB 01: BERANDA
+         ==================================================================== -->
+    <section id="beranda" class="tab-pane active" aria-labelledby="chapter-01">
+      <div class="container">
+        
+        <div class="cover-feature">
+          <div class="cover-badge-row">
+            <span class="cover-tag">Promosi Kesehatan Ibu Hamil Trimester 2 & 3</span>
+          </div>
+
+          <h2 class="cover-title">
+            Edukasi Mandiri Pelatihan Otot Dasar Panggul <em>(Senam Kegel)</em>
+          </h2>
+
+          <p class="cover-text">
+            Selamat datang, Bunda. Selama trimester kedua dan ketiga, banyak ibu hamil mengalami keluarnya sedikit air kencing saat batuk, bersin, atau tertawa. Kondisi ini sangat umum dan bukan hal yang memalukan. Website ini hadir sebagai panduan praktis untuk membantu Bunda memahami penyebabnya dan mempraktikkan senam Kegel yang benar secara mandiri di rumah.
+          </p>
+
+          <div class="cover-cta-row">
+            <a href="#latihan" class="btn-editorial-primary" data-target-tab="latihan">
+              Coba Timer Senam Kegel
+            </a>
+            <a href="#inkontinensia" class="btn-editorial-secondary" data-target-tab="inkontinensia">
+              Mulai Pelajari Materi &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Catatan Bidan -->
+        <div class="midwife-reflection">
+          <div class="reflection-quote">
+            "Menahan kencing yang merembes saat hamil bukan berarti tubuh Bunda bermasalah. Rahim yang membesar memang memberi tekanan alami ke kandung kemih. Dengan melatih otot panggul beberapa menit setiap hari, keluhan ini bisa dicegah dan dikurangi secara nyata."
+          </div>
+          <div class="reflection-author">
+            &mdash; Bidan Sahabat Ibu Hamil
+          </div>
+        </div>
+
+        <!-- Daftar Bab Edukasi -->
+        <div class="chapter-index-section">
+          <span class="section-label">Daftar Isi Pembahasan</span>
+          
+          <div class="chapter-index-grid">
+            
+            <a href="#inkontinensia" class="chapter-card-link" data-target-tab="inkontinensia">
+              <div class="chapter-card-header">
+                <span class="card-num">Bab 02</span>
+                <span class="card-tag">Penyebab</span>
+              </div>
+              <h3>Mengenal Inkontinensia Urine</h3>
+              <p>Pelajari mengapa pembesaran rahim dan hormon kehamilan membuat air kencing lebih mudah merembes.</p>
+              <div class="card-action-text">Baca materi &rarr;</div>
+            </a>
+
+            <a href="#anatomi" class="chapter-card-link" data-target-tab="anatomi">
+              <div class="chapter-card-header">
+                <span class="card-num">Bab 03</span>
+                <span class="card-tag">Gambar Sederhana</span>
+              </div>
+              <h3>Mengenal Otot Dasar Panggul</h3>
+              <p>Lihat bagaimana otot dasar panggul bekerja seperti ayunan kain elastis yang menopang rahim dan kandung kemih.</p>
+              <div class="card-action-text">Buka gambar anatomi &rarr;</div>
+            </a>
+
+            <a href="#kegel" class="chapter-card-link" data-target-tab="kegel">
+              <div class="chapter-card-header">
+                <span class="card-num">Bab 04</span>
+                <span class="card-tag">Latihan</span>
+              </div>
+              <h3>Apa itu Senam Kegel?</h3>
+              <p>Ketahui manfaat senam Kegel untuk memperkuat panggul, mempermudah persalinan, dan mempercepat pemulihan.</p>
+              <div class="card-action-text">Pelajari manfaat &rarr;</div>
+            </a>
+
+            <a href="#latihan" class="chapter-card-link" data-target-tab="latihan">
+              <div class="chapter-card-header">
+                <span class="card-num">Bab 05</span>
+                <span class="card-tag">Praktik</span>
+              </div>
+              <h3>Panduan Gerakan & Timer Latihan</h3>
+              <p>Latihan mandiri dengan panduan hitungan detik, animasi napas santai, dan nada penanda lembut.</p>
+              <div class="card-action-text">Buka timer latihan &rarr;</div>
+            </a>
+
+            <a href="#tips" class="chapter-card-link" data-target-tab="tips">
+              <div class="chapter-card-header">
+                <span class="card-num">Bab 06</span>
+                <span class="card-tag">Keamanan</span>
+              </div>
+              <h3>Anjuran & Pantangan</h3>
+              <p>Hal yang boleh dan tidak boleh dilakukan, serta tanda bahaya kapan harus segera ke bidan atau dokter.</p>
+              <div class="card-action-text">Lihat tips aman &rarr;</div>
+            </a>
+
+            <a href="#kuis" class="chapter-card-link" data-target-tab="kuis">
+              <div class="chapter-card-header">
+                <span class="card-num">Bab 07</span>
+                <span class="card-tag">Evaluasi</span>
+              </div>
+              <h3>Kuis Pemahaman</h3>
+              <p>Cek pemahaman Bunda lewat 5 pertanyaan pilihan ganda dengan pembahasan langsung dan skor otomatis.</p>
+              <div class="card-action-text">Mulai kuis &rarr;</div>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BAB 02: APA ITU INKONTINENSIA URINE?
+         ==================================================================== -->
+    <section id="inkontinensia" class="tab-pane" aria-labelledby="chapter-02">
+      <div class="container">
+        
+        <div class="chapter-header">
+          <div class="chapter-meta">
+            <span class="chapter-indicator">Bab 02 &bull; Dasar Pemahaman</span>
+            <div class="chapter-line"></div>
+          </div>
+          <h2>Mengenal Inkontinensia Urine Saat Hamil</h2>
+          <p class="chapter-deck">
+            Memahami mengapa air kencing bisa merembes tanpa sengaja saat batuk, bersin, atau tertawa, dan mengapa keluhan ini sangat sering dialami ibu hamil trimester 2 dan 3.
+          </p>
+        </div>
+
+        <div class="story-lead-box">
+          <h3>Apa itu Inkontinensia Urine?</h3>
+          <p>
+            <strong>Inkontinensia urine</strong> adalah kondisi saat air kencing keluar tanpa disengaja karena katup saluran kemih tidak mampu menahan tekanan. Pada ibu hamil, jenis yang paling sering terjadi adalah <em>stress incontinence</em> (inkontinensia tekanan).
+          </p>
+          <p style="margin-bottom: 0;">
+            Kata 'stres' di sini bukan karena beban pikiran, melainkan <strong>tekanan fisik mendadak di dalam rongga perut</strong> yang menekan kandung kemih saat Bunda tertawa, terbatuk, bersin, beranjak dari tempat tidur, atau mengangkat barang.
+          </p>
+        </div>
+
+        <div class="story-block">
+          <span class="section-label">Penyebab Utama pada Ibu Hamil</span>
+
+          <div class="editorial-rows-list">
+            
+            <div class="story-row-item">
+              <div class="row-roman-num">01.</div>
+              <div class="row-content">
+                <h4>Pengaruh Hormon Relaksin & Progesteron</h4>
+                <p>
+                  Selama hamil, tubuh memproduksi hormon relaksin agar ligamen dan panggul melentur sebagai persiapan jalan lahir. Efek sampingnya, otot dan katup saluran kemih (*sfingter uretra*) yang biasanya menutup rapat juga ikut melunak dan sedikit meregang.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-row-item">
+              <div class="row-roman-num">02.</div>
+              <div class="row-content">
+                <h4>Tekanan dari Pembesaran Rahim & Janin</h4>
+                <p>
+                  Pada trimester 2 dan 3, bobot janin, plasenta, dan air ketuban terus bertambah. Posisi rahim berada tepat di atas kandung kemih. Tekanan ini membuat kandung kemih lebih cepat terasa penuh meski air seni di dalamnya baru sedikit.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-row-item">
+              <div class="row-roman-num">03.</div>
+              <div class="row-content">
+                <h4>Kelemahan Otot Dasar Panggul yang Jarang Dilatih</h4>
+                <p>
+                  Otot dasar panggul menopang organ-organ panggul sepanjang hari. Bila otot ini jarang dilatih kekencangan dan kelenturannya, daya cengkeram katup kemih akan melemah saat terjadi tekanan mendadak.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Next chapter turn footer -->
+        <div class="chapter-turn-footer">
+          <span style="font-size: 0.85rem; color: var(--color-text-subtle);">Selesai membaca Bab 02</span>
+          <a href="#anatomi" class="turn-next-link" data-target-tab="anatomi">
+            Lanjut ke Bab 03: Kenali Otot Dasar Panggul &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BAB 03: KENALI OTOT DASAR PANGGUL (DIAGRAM SVG BEBAS BORDER TEBAL)
+         ==================================================================== -->
+    <section id="anatomi" class="tab-pane" aria-labelledby="chapter-03">
+      <div class="container">
+        
+        <div class="chapter-header">
+          <div class="chapter-meta">
+            <span class="chapter-indicator">Bab 03 &bull; Gambar Sederhana</span>
+            <div class="chapter-line"></div>
+          </div>
+          <h2>Mengenal Otot Dasar Panggul Bunda</h2>
+          <p class="chapter-deck">
+            Otot dasar panggul bekerja seperti sehelai ayunan kain elastis yang menopang rahim, janin, dan kandung kemih di antara tulang panggul. Sentuh bagian gambar atau tombol di bawah untuk melihat fungsinya.
+          </p>
+        </div>
+
+        <div class="anatomy-gallery-layout">
+          
+          <!-- Minimalist Contour Sketch SVG Card -->
+          <div class="sketch-illustration-container">
+            <div class="svg-sketch-wrapper">
+              <!-- ViewBox luas 520x400 agar teks tidak pernah terpotong di tepi -->
+              <svg viewBox="0 0 520 400" role="img" aria-label="Diagram Sketsa Otot Dasar Panggul">
+                <!-- Lingkaran panduan latar lembut -->
+                <circle cx="260" cy="195" r="165" fill="#FAF6EE" stroke="#EAE1D3" stroke-width="1.2" stroke-dasharray="3 4"/>
+
+                <!-- Pelvis (Tulang Panggul) - Bebas border hitam saat diklik -->
+                <g class="sketch-part" data-organ="pelvis" id="sketchPelvis" role="button" aria-label="Tulang Panggul">
+                  <!-- Sayap panggul kiri -->
+                  <path d="M 120 125 C 100 185, 140 260, 190 280 C 170 230, 140 180, 160 135 Z" fill="#E8DFD1" fill-opacity="0.45" stroke="#3D5A4C" stroke-width="1.6" stroke-linecap="round"/>
+                  <!-- Sayap panggul kanan -->
+                  <path d="M 400 125 C 420 185, 380 260, 330 280 C 350 230, 380 180, 360 135 Z" fill="#E8DFD1" fill-opacity="0.45" stroke="#3D5A4C" stroke-width="1.6" stroke-linecap="round"/>
+                  <!-- Jembatan tulang kemaluan depan -->
+                  <path d="M 190 280 Q 260 310 330 280" fill="none" stroke="#3D5A4C" stroke-width="2.2" stroke-linecap="round"/>
+                  <!-- Garis penunjuk dan label teks (Aman di dalam kanvas) -->
+                  <line x1="125" y1="130" x2="80" y2="90" stroke="#848C87" stroke-width="1" stroke-dasharray="2 2"/>
+                  <text x="45" y="85" font-family="'Newsreader', serif" font-style="italic" font-size="14" fill="#3D5A4C" text-anchor="start">Tulang Panggul</text>
+                </g>
+
+                <!-- Rahim & Janin (Uterus) -->
+                <g class="sketch-part" data-organ="uterus" id="sketchUterus" role="button" aria-label="Rahim dan Janin">
+                  <path d="M 190 160 C 180 95, 330 95, 320 160 C 315 200, 195 200, 190 160 Z" fill="#EBF1ED" fill-opacity="0.8" stroke="#3D5A4C" stroke-width="1.8" stroke-linecap="round"/>
+                  <!-- Siluet lembut janin -->
+                  <path d="M 245 130 C 255 120, 272 125, 275 140 C 278 158, 250 172, 240 155" fill="none" stroke="#627A6E" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="262" cy="132" r="4" fill="#627A6E"/>
+                  <!-- Garis penunjuk dan label teks kanan -->
+                  <line x1="320" y1="130" x2="365" y2="90" stroke="#848C87" stroke-width="1" stroke-dasharray="2 2"/>
+                  <text x="370" y="85" font-family="'Newsreader', serif" font-style="italic" font-size="14" fill="#3D5A4C" text-anchor="start">Rahim & Janin</text>
+                </g>
+
+                <!-- Kandung Kemih (Bladder) -->
+                <g class="sketch-part" data-organ="bladder" id="sketchBladder" role="button" aria-label="Kandung Kemih">
+                  <path d="M 218 198 C 215 182, 295 182, 292 198 C 290 226, 220 226, 218 198 Z" fill="#FAF0F2" fill-opacity="0.9" stroke="#B4566B" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M 228 205 Q 255 200 282 205" fill="none" stroke="#D97A8F" stroke-width="1.4" stroke-linecap="round"/>
+                  <!-- Garis penunjuk dan label teks kiri -->
+                  <line x1="218" y1="205" x2="135" y2="215" stroke="#848C87" stroke-width="1" stroke-dasharray="2 2"/>
+                  <text x="45" y="218" font-family="'Newsreader', serif" font-style="italic" font-size="14" fill="#B4566B" text-anchor="start">Kandung Kemih</text>
+                </g>
+
+                <!-- Saluran Kemih (Urethra) -->
+                <g class="sketch-part" data-organ="urethra" id="sketchUrethra" role="button" aria-label="Saluran Kemih">
+                  <line x1="255" y1="226" x2="255" y2="270" stroke="#3D5A4C" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="3 3"/>
+                  <!-- Garis penunjuk dan label teks kanan -->
+                  <line x1="255" y1="250" x2="365" y2="225" stroke="#848C87" stroke-width="1" stroke-dasharray="2 2"/>
+                  <text x="370" y="228" font-family="'Newsreader', serif" font-style="italic" font-size="14" fill="#3D5A4C" text-anchor="start">Saluran Kemih (Uretra)</text>
+                </g>
+
+                <!-- Ayunan Otot Dasar Panggul (Pelvic Floor) -->
+                <g class="sketch-part active" data-organ="pelvic-floor" id="sketchPelvicFloor" role="button" aria-label="Ayunan Otot Dasar Panggul">
+                  <path d="M 170 245 Q 255 292 340 245 Q 255 272 170 245 Z" fill="#FBF0F2" stroke="#B4566B" stroke-width="2.6" stroke-linecap="round"/>
+                  <!-- Serat elastis ayunan panggul -->
+                  <path d="M 195 254 Q 255 278 315 254" fill="none" stroke="#D97A8F" stroke-width="1.6" stroke-dasharray="4 3"/>
+                  <path d="M 220 262 Q 255 276 290 262" fill="none" stroke="#D97A8F" stroke-width="1.4" stroke-dasharray="4 3"/>
+                  
+                  <!-- Panah penopang ke atas -->
+                  <path d="M 230 286 L 237 277 M 255 290 L 255 279 M 280 286 L 273 277" stroke="#B4566B" stroke-width="1.8" stroke-linecap="round"/>
+                  
+                  <!-- Garis penunjuk dan label bawah -->
+                  <line x1="255" y1="285" x2="255" y2="345" stroke="#848C87" stroke-width="1" stroke-dasharray="2 2"/>
+                  <text x="260" y="365" font-family="'Newsreader', serif" font-style="italic" font-size="14" fill="#B4566B" font-weight="600" text-anchor="middle">
+                    Ayunan Otot Dasar Panggul (Pelvic Floor)
+                  </text>
+                </g>
+              </svg>
+            </div>
+
+            <div class="sketch-caption">
+              Sentuh bagian organ pada gambar atau gunakan tombol di bawah:
+            </div>
+
+            <div class="anatomy-chips-nav">
+              <button type="button" class="chip-btn active" data-organ="pelvic-floor">
+                Otot Dasar Panggul
+              </button>
+              <button type="button" class="chip-btn" data-organ="bladder">
+                Kandung Kemih
+              </button>
+              <button type="button" class="chip-btn" data-organ="uterus">
+                Rahim & Janin
+              </button>
+              <button type="button" class="chip-btn" data-organ="pelvis">
+                Tulang Panggul
+              </button>
+              <button type="button" class="chip-btn" data-organ="urethra">
+                Saluran Kemih
+              </button>
+            </div>
+          </div>
+
+          <!-- Penjelasan Organ -->
+          <div class="anatomy-sidebar-notes">
+            
+            <div class="journal-entry-card active-entry" data-organ="pelvic-floor">
+              <span class="entry-eyebrow">Fokus Utama Latihan</span>
+              <h3>Ayunan Otot Dasar Panggul</h3>
+              <p>
+                Lapisan otot yang membentang dari tulang kemaluan depan hingga tulang ekor di belakang. Berfungsi vital menopang rahim, janin, dan kandung kemih agar tidak turun ke bawah. Saat Bunda melakukan senam Kegel, otot inilah yang sengaja ditarik, dikencangkan, dan dilepaskan.
+              </p>
+            </div>
+
+            <div class="journal-entry-card" data-organ="bladder">
+              <span class="entry-eyebrow">Kantung Kemih</span>
+              <h3>Kandung Kemih (Bladder)</h3>
+              <p>
+                Kantung penampung air kencing yang berada persis di depan rahim. Karena terdesak oleh rahim yang membesar, kapasitasnya berkurang sehingga cepat terasa penuh. Katup di dasarnya dijaga oleh otot panggul agar tidak bocor saat ada tekanan.
+              </p>
+            </div>
+
+            <div class="journal-entry-card" data-organ="uterus">
+              <span class="entry-eyebrow">Kandungan</span>
+              <h3>Rahim & Janin (Uterus)</h3>
+              <p>
+                Tempat bertumbuhnya si kecil. Menjelang persalinan, berat gabungan janin, cairan ketuban, dan plasenta mencapai beberapa kilogram. Beban alami inilah yang ditopang oleh otot dasar panggul Bunda setiap hari.
+              </p>
+            </div>
+
+            <div class="journal-entry-card" data-organ="pelvis">
+              <span class="entry-eyebrow">Rangka Panggul</span>
+              <h3>Tulang Panggul (Pelvis)</h3>
+              <p>
+                Kerangka tulang kokoh tempat melekatnya otot dasar panggul. Selama kehamilan, sendi tulang ini melentur berkat hormon relaksin untuk mempermudah jalan lahir.
+              </p>
+            </div>
+
+            <div class="journal-entry-card" data-organ="urethra">
+              <span class="entry-eyebrow">Saluran Kencing</span>
+              <h3>Saluran Kemih (Uretra)</h3>
+              <p>
+                Saluran keluarnya urine. Otot dasar panggul bekerja seperti klem penjepit yang menjaga saluran ini tetap tertutup rapat sampai Bunda buang air kecil di toilet.
+              </p>
+            </div>
+
+            <!-- Cara Merasakan Otot -->
+            <div class="hammock-insight">
+              <h4>Cara Mudah Merasakan Ototnya</h4>
+              <p>
+                "Saat santai, bayangkan Bunda sedang berusaha menahan buang angin (kentut) agar tidak bersuara, atau bayangkan sedang menahan pipis sebentar. Otot yang terasa terangkat ke atas dan mengencang ke arah dalam—itulah otot dasar panggul Bunda."
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="chapter-turn-footer">
+          <span style="font-size: 0.85rem; color: var(--color-text-subtle);">Selesai membaca Bab 03</span>
+          <a href="#kegel" class="turn-next-link" data-target-tab="kegel">
+            Lanjut ke Bab 04: Apa itu Senam Kegel? &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BAB 04: APA ITU SENAM KEGEL?
+         ==================================================================== -->
+    <section id="kegel" class="tab-pane" aria-labelledby="chapter-04">
+      <div class="container">
+        
+        <div class="chapter-header">
+          <div class="chapter-meta">
+            <span class="chapter-indicator">Bab 04 &bull; Latihan Mandiri</span>
+            <div class="chapter-line"></div>
+          </div>
+          <h2>Apa itu Senam Kegel & Manfaatnya?</h2>
+          <p class="chapter-deck">
+            Latihan sederhana tanpa alat yang dapat dilakukan kapan saja untuk menguatkan dan melenturkan otot dasar panggul selama masa kehamilan.
+          </p>
+        </div>
+
+        <div class="story-lead-box">
+          <h3>Definisi Senam Kegel</h3>
+          <p>
+            <strong>Senam Kegel</strong> (atau latihan otot dasar panggul) adalah gerakan mengencangkan (kontraksi), menahan sejenak, lalu melepaskan (relaksasi) otot dasar panggul secara berulang dan teratur.
+          </p>
+          <p style="margin-bottom: 0;">
+            Senam ini pertama kali diperkenalkan oleh dr. Arnold Kegel, seorang dokter kandungan, sebagai cara alami tanpa obat untuk mengatasi kelemahan otot panggul pada wanita.
+          </p>
+        </div>
+
+        <div class="story-block">
+          <span class="section-label">Manfaat Utama bagi Ibu Hamil</span>
+
+          <div class="editorial-rows-list">
+            
+            <div class="story-row-item">
+              <div class="row-roman-num">01.</div>
+              <div class="row-content">
+                <h4>Mencegah & Mengatasi Kebocoran Urine</h4>
+                <p>
+                  Melatih kekuatan otot dasar panggul membuat katup saluran kemih lebih responsif menutup rapat saat ada sentakan mendadak seperti bersin, batuk, atau tawa.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-row-item">
+              <div class="row-roman-num">02.</div>
+              <div class="row-content">
+                <h4>Mempermudah Proses Persalinan Normal</h4>
+                <p>
+                  Senam Kegel melatih otot agar tidak hanya kuat mencengkeram, tetapi juga mampu melemas secara sadar saat kepala bayi melewati jalan lahir.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-row-item">
+              <div class="row-roman-num">03.</div>
+              <div class="row-content">
+                <h4>Mencegah Risiko Turun Peranakan (Prolaps)</h4>
+                <p>
+                  Mencegah turunnya rahim atau dinding vagina ke arah liang kemaluan akibat regangan beban kehamilan dan proses persalinan.
+                </p>
+              </div>
+            </div>
+
+            <div class="story-row-item">
+              <div class="row-roman-num">04.</div>
+              <div class="row-content">
+                <h4>Mempercepat Pemulihan Masa Nifas</h4>
+                <p>
+                  Gerakan kontraksi dan relaksasi memperlancar aliran darah ke area perineum, sehingga mempercepat penyembuhan jaringan setelah melahirkan.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="chapter-turn-footer">
+          <span style="font-size: 0.85rem; color: var(--color-text-subtle);">Selesai membaca Bab 04</span>
+          <a href="#latihan" class="turn-next-link" data-target-tab="latihan">
+            Lanjut ke Bab 05: Panduan Gerakan & Timer Latihan &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BAB 05: PANDUAN LATIHAN & TIMER INTERAKTIF
+         ==================================================================== -->
+    <section id="latihan" class="tab-pane" aria-labelledby="chapter-05">
+      <div class="container">
+        
+        <div class="chapter-header">
+          <div class="chapter-meta">
+            <span class="chapter-indicator">Bab 05 &bull; Praktik Mandiri</span>
+            <div class="chapter-line"></div>
+          </div>
+          <h2>Panduan Gerakan & Timer Latihan Kegel</h2>
+          <p class="chapter-deck">
+            Ambil posisi santai, atur napas tenang, lalu ikuti hitungan detik dan ritme lingkaran di bawah ini.
+          </p>
+        </div>
+
+        <!-- Timer Latihan Interaktif -->
+        <div class="timer-sanctuary">
+          
+          <div class="timer-nav-controls">
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; color: var(--color-text-subtle); display: block; margin-bottom: 0.4rem;">
+                PILIH RITME LATIHAN:
+              </span>
+              <div class="timer-rhythm-presets">
+                <button type="button" class="rhythm-pill active" data-preset="pemula">
+                  Pemula (3s Tahan &bull; 4s Rileks)
+                </button>
+                <button type="button" class="rhythm-pill" data-preset="menengah">
+                  Standar (5s Tahan &bull; 5s Rileks)
+                </button>
+                <button type="button" class="rhythm-pill" data-preset="lanjutan">
+                  Lanjutan (8s Tahan &bull; 8s Rileks)
+                </button>
+                <button type="button" class="rhythm-pill" data-preset="custom">
+                  Atur Sendiri
+                </button>
+              </div>
+            </div>
+
+            <!-- Tombol Nada Suara Lembut -->
+            <button type="button" class="audio-calm-toggle" id="btnSoundToggle" aria-label="Nyalakan atau matikan nada panduan">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+              Nada Suara Aktif
+            </button>
+          </div>
+
+          <!-- Pengatur Ritme Kustom -->
+          <div id="customTimerSettings" class="custom-rhythm-panel">
+            <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-sage-deep);">
+              Sesuaikan Detik Latihan Berdasarkan Kenyamanan Bunda:
+            </span>
+            <div class="custom-sliders-grid">
+              <div class="slider-unit">
+                <label for="contractRange">Waktu Tahan (Kontraksi): <span id="valContract">3</span> detik</label>
+                <input type="range" id="contractRange" min="2" max="10" value="3" step="1">
+              </div>
+              <div class="slider-unit">
+                <label for="relaxRange">Waktu Rileks (Istirahat): <span id="valRelax">4</span> detik</label>
+                <input type="range" id="relaxRange" min="2" max="10" value="4" step="1">
+              </div>
+              <div class="slider-unit">
+                <label for="repsRange">Jumlah Siklus (Repetisi): <span id="valReps">5</span> kali</label>
+                <input type="range" id="repsRange" min="3" max="15" value="5" step="1">
+              </div>
+            </div>
+          </div>
+
+          <!-- Indikator Repetisi -->
+          <div class="repetition-strip">
+            <span class="repetition-label" id="repStatusText">Siklus 1 dari 5</span>
+            <div class="dots-ribbon" id="repDotsContainer">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Animasi Lingkaran Denyut Napas -->
+          <div class="meditation-pod-stage">
+            <div class="pebble-chamber">
+              <div class="pebble-halo"></div>
+              <div class="organic-pebble" id="pulseCircle">
+                <span class="pebble-phase-tag" id="phaseBadge">SIAP LATIHAN</span>
+                <span class="pebble-timer-number" id="timerCountdown">3</span>
+                <span class="pebble-whisper" id="timerInstruction">
+                  Klik 'Mulai Latihan' saat Bunda telah siap.
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tombol Aksi Timer -->
+          <div class="sanctuary-actions">
+            <button type="button" class="btn-tactile-start" id="btnStartTimer">
+              Mulai Latihan
+            </button>
+            <button type="button" class="btn-tactile-pause" id="btnPauseTimer" style="display: none;">
+              Jeda Latihan
+            </button>
+            <button type="button" class="btn-tactile-reset" id="btnResetTimer">
+              Atur Ulang
+            </button>
+          </div>
+
+          <p style="text-align: center; font-size: 0.85rem; color: var(--color-text-subtle); margin-top: 1.75rem; margin-bottom: 0;">
+            <em>Ingat: Bernapaslah santai lewat hidung. Jangan menahan napas di tenggorokan atau dada.</em>
+          </p>
+        </div>
+
+        <!-- Tata Cara Latihan: Format 2x2 di Desktop, 1 per Baris di HP -->
+        <span class="section-label">Tata Cara Melakukan Latihan yang Benar</span>
+        <div class="guidance-steps-grid">
+          
+          <div class="guidance-card">
+            <span class="step-eyebrow">Langkah 01</span>
+            <h4>Buang Air Kecil Terlebih Dahulu</h4>
+            <p>Selalu kosongkan kandung kemih di toilet sebelum mulai latihan agar kandung kemih tidak tertekan selama kontraksi berlangsung.</p>
+          </div>
+
+          <div class="guidance-card">
+            <span class="step-eyebrow">Langkah 02</span>
+            <h4>Pilih Posisi Tubuh yang Nyaman</h4>
+            <p>Bagi pemula, berbaring miring ke kiri dengan bantal di antara kedua lutut sangat dianjurkan. Bunda juga bisa duduk santai di kursi dengan kaki menapak lantai.</p>
+          </div>
+
+          <div class="guidance-card">
+            <span class="step-eyebrow">Langkah 03</span>
+            <h4>Kencangkan & Angkat Otot Panggul</h4>
+            <p>Kencangkan otot seperti sedang menahan buang angin. Rasakan otot terangkat ke arah dalam. Pastikan perut, paha, dan bokong tetap lemas/rileks.</p>
+          </div>
+
+          <div class="guidance-card">
+            <span class="step-eyebrow">Langkah 04</span>
+            <h4>Lepaskan & Rilekskan Sepenuhnya</h4>
+            <p>Lepaskan cengkeraman otot secara total selama beberapa detik. Memberi waktu rileks sama pentingnya dengan mengencangkan agar otot tidak kelelahan.</p>
+          </div>
+
+        </div>
+
+        <div class="chapter-turn-footer">
+          <span style="font-size: 0.85rem; color: var(--color-text-subtle);">Selesai membaca Bab 05</span>
+          <a href="#tips" class="turn-next-link" data-target-tab="tips">
+            Lanjut ke Bab 06: Anjuran & Pantangan &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BAB 06: ANJURAN & PANTANGAN
+         ==================================================================== -->
+    <section id="tips" class="tab-pane" aria-labelledby="chapter-06">
+      <div class="container">
+        
+        <div class="chapter-header">
+          <div class="chapter-meta">
+            <span class="chapter-indicator">Bab 06 &bull; Keamanan Latihan</span>
+            <div class="chapter-line"></div>
+          </div>
+          <h2>Anjuran & Hal yang Perlu Dihindari</h2>
+          <p class="chapter-deck">
+            Panduan praktis agar latihan Bunda aman dan efektif, serta tanda penting kapan harus memeriksakan diri ke tenaga medis.
+          </p>
+        </div>
+
+        <div class="advice-columns-grid">
+          
+          <!-- ANJURAN (DO'S) -->
+          <div class="advice-journal-col col-dos">
+            <div class="col-header-row">
+              <h3>Yang Dianjurkan</h3>
+            </div>
+            <ul class="editorial-check-list">
+              <li>
+                <span class="list-mark">&bull;</span>
+                <div>
+                  <strong>Lakukan Rutin 2–3 Kali Sehari:</strong> Misalnya beberapa repetisi di pagi hari setelah bangun tidur, siang hari saat istirahat, dan malam hari sebelum tidur.
+                </div>
+              </li>
+              <li>
+                <span class="list-mark">&bull;</span>
+                <div>
+                  <strong>Cek Dinding Perut Bunda:</strong> Sentuh perut bagian bawah dengan satu tangan saat latihan; dinding perut harus tetap lembut dan tidak ikut mengeras.
+                </div>
+              </li>
+              <li>
+                <span class="list-mark">&bull;</span>
+                <div>
+                  <strong>Tetap Bernapas Biasa:</strong> Tarik dan hembuskan napas secara wajar lewat hidung. Jika sulit, hitunglah detik secara bersuara perlahan.
+                </div>
+              </li>
+              <li>
+                <span class="list-mark">&bull;</span>
+                <div>
+                  <strong>Beri Waktu Istirahat Cukup:</strong> Waktu melepaskan otot (rileks) sebaiknya sama panjang atau sedikit lebih lama dari waktu menahan otot.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- PANTANGAN (DON'TS) -->
+          <div class="advice-journal-col col-donts">
+            <div class="col-header-row">
+              <h3>Yang Harus Dihindari</h3>
+            </div>
+            <ul class="editorial-check-list">
+              <li>
+                <span class="list-mark">&times;</span>
+                <div>
+                  <strong>JANGAN Menahan Kencing Saat di Toilet:</strong> Menahan aliran pipis hanya untuk tes awal mengenali otot saja. Bila dilakukan rutin, hal ini dapat memicu infeksi saluran kemih (ISK).
+                </div>
+              </li>
+              <li>
+                <span class="list-mark">&times;</span>
+                <div>
+                  <strong>JANGAN Meremas Paha atau Bokong:</strong> Menjepit kedua paha atau mengencangkan pantat berarti Bunda memakai otot kompensasi luar, bukan otot dasar panggul.
+                </div>
+              </li>
+              <li>
+                <span class="list-mark">&times;</span>
+                <div>
+                  <strong>JANGAN Latihan Berlebihan:</strong> Melakukan puluhan kali sekaligus tanpa jeda bisa membuat otot panggul kaku tegang, yang justru menyulitkan persalinan.
+                </div>
+              </li>
+              <li>
+                <span class="list-mark">&times;</span>
+                <div>
+                  <strong>JANGAN Menahan Napas di Dada:</strong> Menahan napas meningkatkan tekanan dalam perut yang justru menekan rahim ke bawah.
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Tanda Bahaya Medis -->
+        <div class="clinical-caution-card">
+          <div class="caution-header">
+            <h3>Kapan Harus Segera ke Bidan atau Dokter?</h3>
+          </div>
+          <p style="margin-bottom: 0.85rem; font-size: 0.95rem;">
+            Senam Kegel adalah tindakan preventif alami. Namun segeralah periksakan diri ke fasilitas kesehatan terdekat jika Bunda mengalami:
+          </p>
+          <ul class="caution-bullets">
+            <li>Rasa perih, panas seperti terbakar, atau nyeri tajam saat buang air kecil.</li>
+            <li>Warna urine tampak keruh kemerahan, berbau menyengat, atau disertai demam dan menggigil (tanda infeksi saluran kemih).</li>
+            <li>Keluar cairan bening yang merembes membasahi celana dalam tanpa rasa ingin pipis (waspada rembesan air ketuban dini).</li>
+            <li>Nyeri berdenyut hebat di area panggul atau pinggang belakang yang tidak mereda setelah beristirahat.</li>
+          </ul>
+        </div>
+
+        <div class="chapter-turn-footer">
+          <span style="font-size: 0.85rem; color: var(--color-text-subtle);">Selesai membaca Bab 06</span>
+          <a href="#kuis" class="turn-next-link" data-target-tab="kuis">
+            Lanjut ke Bab 07: Kuis Pemahaman &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BAB 07: KUIS EVALUASI
+         ==================================================================== -->
+    <section id="kuis" class="tab-pane" aria-labelledby="chapter-07">
+      <div class="container">
+        
+        <div class="chapter-header">
+          <div class="chapter-meta">
+            <span class="chapter-indicator">Bab 07 &bull; Evaluasi Mandiri</span>
+            <div class="chapter-line"></div>
+          </div>
+          <h2>Kuis Evaluasi Pemahaman</h2>
+          <p class="chapter-deck">
+            Uji pemahaman Bunda seputar kesehatan dasar panggul dan teknik senam Kegel melalui 5 pertanyaan singkat di bawah ini.
+          </p>
+        </div>
+
+        <div class="quiz-stationery-container">
+          
+          <div class="quiz-meter">
+            <span id="quizProgressText">Pertanyaan 1 dari 5</span>
+            <span style="font-family: var(--font-serif); font-style: italic;">Umpan Balik Langsung</span>
+          </div>
+          <div class="quiz-progress-line">
+            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+          </div>
+
+          <!-- Bagian Pertanyaan Aktif -->
+          <div id="quizQuestionSection">
+            <div class="quiz-prompt-text" id="quizQuestionText">
+              1. Mengapa ibu hamil pada trimester 2 dan 3 lebih mudah mengalami kebocoran urine saat batuk atau tertawa?
+            </div>
+
+            <div class="choices-stack" id="quizOptionsList">
+              <!-- Choices dynamically rendered -->
+            </div>
+
+            <!-- Kotak Penjelasan Langsung -->
+            <div class="midwife-explanation-box" id="quizFeedback">
+              <h4 id="quizFeedbackTitle">Pembahasan</h4>
+              <p id="quizFeedbackText">Penjelasan edukatif akan tampil di sini.</p>
+            </div>
+
+            <div class="quiz-footer-actions">
+              <button type="button" class="btn-proceed-quiz" id="btnNextQuestion" style="display: none;">
+                Pertanyaan Berikutnya &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- Tampilan Skor Hasil Kuis -->
+          <div class="score-tribute-view" id="quizResultsCard">
+            <div class="score-numeral" id="quizScoreDisplay">100%</div>
+            <div class="score-status-title" id="quizBadgeReward">
+              Pemahaman Sangat Baik
+            </div>
+            <p class="score-appraisal" id="quizResultMessage">
+              Pemahaman Bunda mengenai pencegahan kebocoran urine dan teknik senam Kegel sudah sangat baik. Terapkan latihan ini secara rutin setiap hari selama kehamilan.
+            </p>
+
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+              <button type="button" class="btn-editorial-secondary" id="btnRestartQuiz">
+                Ulangi Kuis
+              </button>
+              <a href="#latihan" class="btn-editorial-primary" data-target-tab="latihan">
+                Lanjut Praktik di Ruang Latihan &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chapter-turn-footer">
+          <span style="font-size: 0.85rem; color: var(--color-text-subtle);">Selesai membaca Bab 07</span>
+          <a href="#referensi" class="turn-next-link" data-target-tab="referensi">
+            Lanjut ke Bab 08: Kepustakaan & Rujukan &rarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         BAB 08: REFERENSI & DISCLAIMER
+         ==================================================================== -->
+    <section id="referensi" class="tab-pane" aria-labelledby="chapter-08">
+      <div class="container">
+        
+        <div class="chapter-header">
+          <div class="chapter-meta">
+            <span class="chapter-indicator">Bab 08 &bull; Landasan Ilmiah</span>
+            <div class="chapter-line"></div>
+          </div>
+          <h2>Kepustakaan & Sumber Rujukan</h2>
+          <p class="chapter-deck">
+            Materi disusun mengacu pada buku pedoman pelayanan antenatal nasional serta pedoman klinis kebidanan terpercaya.
+          </p>
+        </div>
+
+        <div class="bibliotheque-grid">
+          
+          <div class="citation-card">
+            <span class="citation-tag">Pedoman Nasional</span>
+            <h4>Kementerian Kesehatan Republik Indonesia (Kemenkes RI)</h4>
+            <p>
+              Pedoman Pelayanan Antenatal Terpadu & Buku Kesehatan Ibu dan Anak (KIA). Materi panduan aktivitas fisik, senam hamil, dan pencegahan ketidaknyamanan trimester akhir.
+            </p>
+          </div>
+
+          <div class="citation-card">
+            <span class="citation-tag">Organisasi Kesehatan Dunia</span>
+            <h4>World Health Organization (WHO)</h4>
+            <p>
+              <em>WHO Recommendations on Antenatal Care for a Positive Pregnancy Experience</em> (2016). Pelvic floor muscle training (PFMT) for the prevention of urinary incontinence during pregnancy and postpartum.
+            </p>
+          </div>
+
+          <div class="citation-card">
+            <span class="citation-tag">Organisasi Profesi Kebidanan</span>
+            <h4>Perkumpulan Obstetri dan Ginekologi Indonesia (POGI)</h4>
+            <p>
+              Panduan Praktik Klinis dan Konsensus Nasional Penatalaksanaan Gangguan Dasar Panggul Terkait Kehamilan dan Persalinan.
+            </p>
+          </div>
+
+          <div class="citation-card">
+            <span class="citation-tag">Dokter Spesialis Kebidanan</span>
+            <h4>American College of Obstetricians and Gynecologists (ACOG)</h4>
+            <p>
+              Clinical Practice Bulletin: <em>Pelvic Floor Dysfunction and Physical Therapy in Pregnancy and Postpartum</em>. Bukti klinis latihan Kegel dalam menjaga kontinensia urine.
+            </p>
+          </div>
+
+          <div class="citation-card">
+            <span class="citation-tag">Riset Sistematik Global</span>
+            <h4>Cochrane Database of Systematic Reviews</h4>
+            <p>
+              Woodley SJ, et al. (2020). <em>Pelvic floor muscle training for preventing and treating urinary and faecal incontinence in antenatal and postnatal women</em>.
+            </p>
+          </div>
+
+          <div class="citation-card">
+            <span class="citation-tag">Uroginekologi Internasional</span>
+            <h4>International Urogynecological Association (IUGA)</h4>
+            <p>
+              <em>Patient Educational Leaflet: Pelvic Floor Exercises & Pregnancy</em>. Panduan praktis isolasi otot dasar panggul bagi ibu hamil.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Disclaimer Medis -->
+        <div class="editorial-disclaimer">
+          <h4>Catatan Penting (Disclaimer Medis)</h4>
+          <p>
+            Website ini disusun khusus sebagai sarana edukasi dan promosi kesehatan (promkes) preventif bagi ibu hamil. Informasi di sini tidak menggantikan pemeriksaan fisik langsung, diagnosis, ataupun saran medis individual dari Dokter Spesialis Obstetri & Ginekologi (Sp.OG) atau Bidan. Bila Bunda memiliki riwayat komplikasi kehamilan (seperti plasenta previa, perdarahan jalan lahir, atau keluhan inkontinensia kronis yang disertai rasa sakit), selalu konsultasikan terlebih dahulu dengan tenaga medis yang merawat Bunda.
+          </p>
+        </div>
+
+        <div class="chapter-turn-footer">
+          <span style="font-size: 0.85rem; color: var(--color-text-subtle);">Selesai membaca seluruh materi</span>
+          <a href="#beranda" class="turn-next-link" data-target-tab="beranda">
+            Kembali ke Bab 01: Beranda &uarr;
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Colophon Footer -->
+  <footer class="colophon-footer">
+    <div class="container">
+      <h3>Ruang Panggul Ibu</h3>
+      <p>Edukasi Digital Pelatihan Otot Dasar Panggul (Senam Kegel) untuk Mencegah Inkontinensia Urine pada Ibu Hamil</p>
+      <div class="colophon-meta">
+        Disusun untuk Tugas Promosi Kesehatan (Promkes) &bull; 2026 &bull; Akses Terbuka &amp; Ramah Layar Ponsel
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
