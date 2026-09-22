@@ -1480,30 +1480,20 @@ main {
   margin-bottom: 0;
 }
 
-/* Colophon Footer */
+/* Colophon Footer - Minimal, Bersih & Muted */
 .colophon-footer {
   background-color: var(--color-sand-soft);
   border-top: 1px solid var(--color-sand-border);
-  padding: 2.8rem 0;
+  padding: 1.5rem 0;
   margin-top: auto;
   text-align: center;
 }
 
-.colophon-footer h3 {
-  font-size: 1.25rem;
-  color: var(--color-sage-deep);
-  margin-bottom: 0.4rem;
-}
-
-.colophon-footer p {
-  font-size: 0.88rem;
-  color: var(--color-text-muted);
-  margin-bottom: 0.4rem;
-}
-
-.colophon-meta {
-  font-size: 0.78rem;
+.footer-simple-text {
+  font-size: 0.85rem;
   color: var(--color-text-subtle);
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
 /* Animations */
