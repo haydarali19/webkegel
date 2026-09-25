@@ -22,6 +22,11 @@ function initEditorialNavigation() {
   const jumpLinks = document.querySelectorAll('[data-target-tab]');
 
   function navigateToChapter(targetChapterId) {
+    // Jeda otomatis pemutaran video jika pengguna berpindah ke bab lain
+    if (targetChapterId !== 'latihan') {
+      pausePracticeVideo();
+    }
+
     // Perbarui tombol tab aktif
     chapterButtons.forEach(btn => {
       if (btn.dataset.tab === targetChapterId) {
@@ -68,12 +73,70 @@ function initEditorialNavigation() {
 }
 
 /* ==========================================================================
-   2. KERANGKA PEMUTAR VIDEO PANDUAN SENAM KEGEL
+   2. PEMUTAR VIDEO PANDUAN SENAM KEGEL & AUTO-PAUSE LOGIC
    ========================================================================== */
+function pausePracticeVideo() {
+  const iframe = document.getElementById('videoKegelIframe');
+  const video = document.getElementById('videoKegel');
+
+  if (iframe && iframe.contentWindow) {
+    try {
+      iframe.contentWindow.postMessage(
+        JSON.stringify({
+          event: 'command',
+          func: 'pauseVideo',
+          args: []
+        }),
+        '*'
+      );
+      iframe.contentWindow.postMessage(
+        JSON.stringify({
+          event: 'command',
+          func: 'pauseVideo',
+          args: ''
+        }),
+        '*'
+      );
+    } catch (err) {
+      // ignore cross-origin error
+    }
+  }
+
+  if (video && typeof video.pause === 'function') {
+    try {
+      video.pause();
+    } catch (err) {
+      // ignore
+    }
+  }
+}
+
 function initVideoGuide() {
   const iframe = document.getElementById('videoKegelIframe');
   const video = document.getElementById('videoKegel');
   const checkpointButtons = document.querySelectorAll('.checkpoint-chip');
+  const latihanPane = document.getElementById('latihan');
+
+  // Pengawas mutasi: pastikan video dijeda jika section latihan kehilangan kelas active
+  if (latihanPane) {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach(mutation => {
+        if (mutation.attributeName === 'class') {
+          if (!latihanPane.classList.contains('active')) {
+            pausePracticeVideo();
+          }
+        }
+      });
+    });
+    observer.observe(latihanPane, { attributes: true, attributeFilter: ['class'] });
+  }
+
+  // Jeda video otomatis saat tab browser diminimalkan atau disembunyikan
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      pausePracticeVideo();
+    }
+  });
 
   if (!checkpointButtons.length) return;
 
