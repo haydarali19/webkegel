@@ -1,16 +1,15 @@
 /**
- * Ruang Panggul Ibu - Panduan Mandiri Senam Kegel Kehamilan
+ * STIKES RSPAD Gatot Soebroto
+ * Media Edukasi Digital Senam Kegel Ibu Hamil
  * Skrip Logika:
- * 1. Navigasi Bab & Perpindahan Halaman Halus
- * 2. Sketsa Interaktif Anatomi Panggul
- * 3. Timer Senam Kegel dengan Animasi Denyut Napas & Nada Suara Lembut
- * 4. Kuis Evaluasi Pemahaman Mandiri
+ * 1. Navigasi Bab & Perpindahan Halaman Halus (7 Bab)
+ * 2. Kerangka Interaktif Pemutar Video Panduan Latihan
+ * 3. Kuis Evaluasi Pemahaman Mandiri
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initEditorialNavigation();
-  initAnatomySketch();
-  initMindfulTimer();
+  initVideoGuide();
   initStationeryQuiz();
 });
 
@@ -69,385 +68,29 @@ function initEditorialNavigation() {
 }
 
 /* ==========================================================================
-   2. ANATOMI SKETSA PANGGUL INTERAKTIF (BEBAS BORDER HITAM)
+   2. KERANGKA PEMUTAR VIDEO PANDUAN SENAM KEGEL
    ========================================================================== */
-function initAnatomySketch() {
-  const sketchParts = document.querySelectorAll('.sketch-part');
-  const chips = document.querySelectorAll('.chip-btn');
-  const journalCards = document.querySelectorAll('.journal-entry-card');
+function initVideoGuide() {
+  const video = document.getElementById('videoKegel');
+  const checkpointButtons = document.querySelectorAll('.checkpoint-chip');
 
-  function spotlightOrgan(organKey) {
-    // Sorot elemen gambar
-    sketchParts.forEach(part => {
-      if (part.dataset.organ === organKey) {
-        part.classList.add('active');
-      } else {
-        part.classList.remove('active');
-      }
-    });
+  if (!video || !checkpointButtons.length) return;
 
-    // Sorot tombol chip
-    chips.forEach(chip => {
-      if (chip.dataset.organ === organKey) {
-        chip.classList.add('active');
-      } else {
-        chip.classList.remove('active');
-      }
-    });
-
-    // Tampilkan kartu penjelasan
-    journalCards.forEach(card => {
-      if (card.dataset.organ === organKey) {
-        card.classList.add('active-entry');
-      } else {
-        card.classList.remove('active-entry');
-      }
-    });
-  }
-
-  sketchParts.forEach(part => {
-    part.addEventListener('click', () => {
-      spotlightOrgan(part.dataset.organ);
-    });
-  });
-
-  chips.forEach(chip => {
-    chip.addEventListener('click', () => {
-      spotlightOrgan(chip.dataset.organ);
-    });
-  });
-}
-
-/* ==========================================================================
-   3. TIMER SENAM KEGEL INTERAKTIF (DENYUT NAPAS & NADA LEMBUT)
-   ========================================================================== */
-function initMindfulTimer() {
-  const RHYTHMS = {
-    pemula: { contract: 3, relax: 4, reps: 5, label: 'Pemula' },
-    menengah: { contract: 5, relax: 5, reps: 8, label: 'Standar' },
-    lanjutan: { contract: 8, relax: 8, reps: 10, label: 'Lanjutan' }
-  };
-
-  let currentRhythm = { ...RHYTHMS.pemula };
-  let timerState = 'idle'; // 'idle', 'running', 'paused', 'completed'
-  let currentPhase = 'contract'; // 'contract' atau 'relax'
-  let currentRep = 1;
-  let remainingSeconds = currentRhythm.contract;
-  let timerInterval = null;
-  let isMuted = false;
-
-  // Elemen DOM
-  const pebble = document.getElementById('pulseCircle');
-  const phaseBadge = document.getElementById('phaseBadge');
-  const countdownNumber = document.getElementById('timerCountdown');
-  const instructionWhisper = document.getElementById('timerInstruction');
-  const repStatusText = document.getElementById('repStatusText');
-  const repDotsContainer = document.getElementById('repDotsContainer');
-
-  const btnStart = document.getElementById('btnStartTimer');
-  const btnPause = document.getElementById('btnPauseTimer');
-  const btnReset = document.getElementById('btnResetTimer');
-  const btnSoundToggle = document.getElementById('btnSoundToggle');
-  const presetPills = document.querySelectorAll('.rhythm-pill');
-
-  // Pengatur Kustom
-  const customSection = document.getElementById('customTimerSettings');
-  const contractRange = document.getElementById('contractRange');
-  const relaxRange = document.getElementById('relaxRange');
-  const repsRange = document.getElementById('repsRange');
-  const valContract = document.getElementById('valContract');
-  const valRelax = document.getElementById('valRelax');
-  const valReps = document.getElementById('valReps');
-
-  // Audio Context untuk nada lembut (Web Audio API)
-  let audioCtx = null;
-
-  function initAudio() {
-    if (!audioCtx && (window.AudioContext || window.webkitAudioContext)) {
-      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-      audioCtx = new AudioContextClass();
-    }
-    if (audioCtx && audioCtx.state === 'suspended') {
-      audioCtx.resume();
-    }
-  }
-
-  function playMindfulChime(type) {
-    if (isMuted) return;
-    try {
-      initAudio();
-      if (!audioCtx) return;
-
-      const now = audioCtx.currentTime;
-
-      if (type === 'contract') {
-        // Nada lembut naik menandakan mulai mengencangkan otot
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(440, now);
-        osc.frequency.exponentialRampToValueAtTime(523.25, now + 0.3);
-
-        gain.gain.setValueAtTime(0.001, now);
-        gain.gain.linearRampToValueAtTime(0.08, now + 0.06);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
-
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start(now);
-        osc.stop(now + 0.5);
-      } else if (type === 'relax') {
-        // Nada lembut turun menandakan saatnya melemaskan otot
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(392, now);
-        osc.frequency.exponentialRampToValueAtTime(329.63, now + 0.35);
-
-        gain.gain.setValueAtTime(0.001, now);
-        gain.gain.linearRampToValueAtTime(0.07, now + 0.05);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
-
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start(now);
-        osc.stop(now + 0.6);
-      } else if (type === 'complete') {
-        // Nada harmoni selesai
-        const chord = [261.63, 329.63, 392.00, 523.25];
-        chord.forEach((freq, idx) => {
-          const osc = audioCtx.createOscillator();
-          const gain = audioCtx.createGain();
-          osc.type = 'sine';
-          const startTime = now + (idx * 0.12);
-          osc.frequency.setValueAtTime(freq, startTime);
-
-          gain.gain.setValueAtTime(0.001, startTime);
-          gain.gain.linearRampToValueAtTime(0.09, startTime + 0.05);
-          gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.85);
-
-          osc.connect(gain);
-          gain.connect(audioCtx.destination);
-          osc.start(startTime);
-          osc.stop(startTime + 0.85);
+  checkpointButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const timeInSeconds = parseFloat(btn.dataset.time);
+      if (!isNaN(timeInSeconds)) {
+        video.currentTime = timeInSeconds;
+        video.play().catch(() => {
+          // Abaikan jika browser memblokir pemutaran otomatis sebelum interaksi langsung pada player
         });
       }
-    } catch (e) {
-      console.warn('Audio note error:', e);
-    }
-  }
-
-  function renderDots() {
-    repDotsContainer.innerHTML = '';
-    for (let i = 1; i <= currentRhythm.reps; i++) {
-      const dot = document.createElement('div');
-      dot.className = 'ribbon-dot';
-      if (i < currentRep || timerState === 'completed') {
-        dot.classList.add('done');
-      } else if (i === currentRep) {
-        dot.classList.add('active-now');
-      }
-      repDotsContainer.appendChild(dot);
-    }
-
-    if (timerState === 'completed') {
-      repStatusText.textContent = `Latihan Selesai: ${currentRhythm.reps} siklus tuntas`;
-    } else {
-      repStatusText.textContent = `Siklus ${currentRep} dari ${currentRhythm.reps}`;
-    }
-  }
-
-  function updateVisuals() {
-    countdownNumber.textContent = remainingSeconds;
-
-    if (timerState === 'completed') {
-      pebble.className = 'organic-pebble completed';
-      phaseBadge.className = 'pebble-phase-tag';
-      phaseBadge.textContent = 'SELESAI';
-      instructionWhisper.textContent = 'Luar biasa, Bunda! Latihan hari ini telah selesai.';
-      btnStart.style.display = 'none';
-      btnPause.style.display = 'none';
-      return;
-    }
-
-    if (currentPhase === 'contract') {
-      pebble.className = 'organic-pebble contracting';
-      phaseBadge.className = 'pebble-phase-tag tag-contract';
-      phaseBadge.textContent = 'TAHAN & ANGKAT';
-      instructionWhisper.textContent = 'Kencangkan otot panggul perlahan ke arah dalam...';
-    } else {
-      pebble.className = 'organic-pebble relaxing';
-      phaseBadge.className = 'pebble-phase-tag tag-relax';
-      phaseBadge.textContent = 'LEPAS & RILEKS';
-      instructionWhisper.textContent = 'Lepaskan sepenuhnya, biarkan panggul lemas...';
-    }
-    renderDots();
-  }
-
-  function stepTimer() {
-    if (remainingSeconds > 1) {
-      remainingSeconds--;
-      countdownNumber.textContent = remainingSeconds;
-    } else {
-      if (currentPhase === 'contract') {
-        currentPhase = 'relax';
-        remainingSeconds = currentRhythm.relax;
-        playMindfulChime('relax');
-        updateVisuals();
-      } else {
-        if (currentRep < currentRhythm.reps) {
-          currentRep++;
-          currentPhase = 'contract';
-          remainingSeconds = currentRhythm.contract;
-          playMindfulChime('contract');
-          updateVisuals();
-        } else {
-          finishTimer();
-        }
-      }
-    }
-  }
-
-  function startTimer() {
-    initAudio();
-    if (timerState === 'idle' || timerState === 'completed') {
-      currentRep = 1;
-      currentPhase = 'contract';
-      remainingSeconds = currentRhythm.contract;
-      playMindfulChime('contract');
-    }
-    timerState = 'running';
-    updateVisuals();
-
-    btnStart.style.display = 'none';
-    btnPause.style.display = 'inline-flex';
-    btnPause.textContent = 'Jeda Latihan';
-
-    clearInterval(timerInterval);
-    timerInterval = setInterval(stepTimer, 1000);
-  }
-
-  function pauseTimer() {
-    if (timerState === 'running') {
-      clearInterval(timerInterval);
-      timerState = 'paused';
-      btnPause.textContent = 'Lanjutkan Latihan';
-      instructionWhisper.textContent = 'Latihan dijeda sejenak. Bernapaslah santai.';
-    } else if (timerState === 'paused') {
-      timerState = 'running';
-      btnPause.textContent = 'Jeda Latihan';
-      if (currentPhase === 'contract') {
-        instructionWhisper.textContent = 'Kencangkan otot panggul perlahan ke arah dalam...';
-      } else {
-        instructionWhisper.textContent = 'Lepaskan sepenuhnya, biarkan panggul lemas...';
-      }
-      clearInterval(timerInterval);
-      timerInterval = setInterval(stepTimer, 1000);
-    }
-  }
-
-  function resetTimer() {
-    clearInterval(timerInterval);
-    timerState = 'idle';
-    currentRep = 1;
-    currentPhase = 'contract';
-    remainingSeconds = currentRhythm.contract;
-
-    pebble.className = 'organic-pebble';
-    phaseBadge.className = 'pebble-phase-tag';
-    phaseBadge.textContent = 'SIAP LATIHAN';
-    instructionWhisper.textContent = "Klik 'Mulai Latihan' saat Bunda telah siap.";
-    countdownNumber.textContent = currentRhythm.contract;
-
-    btnStart.style.display = 'inline-flex';
-    btnPause.style.display = 'none';
-
-    renderDots();
-  }
-
-  function finishTimer() {
-    clearInterval(timerInterval);
-    timerState = 'completed';
-    playMindfulChime('complete');
-    updateVisuals();
-  }
-
-  // Pengaturan Preset
-  presetPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      const key = pill.dataset.preset;
-      presetPills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-
-      if (key === 'custom') {
-        customSection.style.display = 'block';
-        currentRhythm = {
-          contract: parseInt(contractRange.value, 10),
-          relax: parseInt(relaxRange.value, 10),
-          reps: parseInt(repsRange.value, 10),
-          label: 'Kustom'
-        };
-      } else {
-        customSection.style.display = 'none';
-        currentRhythm = { ...RHYTHMS[key] };
-      }
-      resetTimer();
     });
   });
-
-  // Listener Slider Kustom
-  function handleCustomRange() {
-    valContract.textContent = contractRange.value;
-    valRelax.textContent = relaxRange.value;
-    valReps.textContent = repsRange.value;
-
-    currentRhythm.contract = parseInt(contractRange.value, 10);
-    currentRhythm.relax = parseInt(relaxRange.value, 10);
-    currentRhythm.reps = parseInt(repsRange.value, 10);
-
-    resetTimer();
-  }
-
-  if (contractRange && relaxRange && repsRange) {
-    contractRange.addEventListener('input', handleCustomRange);
-    relaxRange.addEventListener('input', handleCustomRange);
-    repsRange.addEventListener('input', handleCustomRange);
-  }
-
-  // Tombol Toggle Suara
-  btnSoundToggle.addEventListener('click', () => {
-    isMuted = !isMuted;
-    if (isMuted) {
-      btnSoundToggle.classList.add('muted');
-      btnSoundToggle.innerHTML = `
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-          <line x1="23" y1="9" x2="17" y2="15"></line>
-          <line x1="17" y1="9" x2="23" y2="15"></line>
-        </svg>
-        Nada Senyap
-      `;
-    } else {
-      btnSoundToggle.classList.remove('muted');
-      btnSoundToggle.innerHTML = `
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-        </svg>
-        Nada Suara Aktif
-      `;
-    }
-  });
-
-  btnStart.addEventListener('click', startTimer);
-  btnPause.addEventListener('click', pauseTimer);
-  btnReset.addEventListener('click', resetTimer);
-
-  resetTimer();
 }
 
 /* ==========================================================================
-   4. KUIS EVALUASI PEMAHAMAN (5 SOAL BERSKOR OTOMATIS)
+   3. KUIS EVALUASI PEMAHAMAN (5 SOAL BERSKOR OTOMATIS)
    ========================================================================== */
 function initStationeryQuiz() {
   const quizData = [
@@ -614,7 +257,7 @@ function initStationeryQuiz() {
       resultMessage.textContent = 'Bunda sudah menangkap gambaran utamanya. Luangkan waktu 2 menit untuk membaca kembali bab Anjuran & Pantangan agar latihan Bunda semakin mantap dan bebas ragu.';
     } else {
       badgeReward.textContent = 'Yuk, Baca Santai Sekali Lagi';
-      resultMessage.textContent = 'Tidak apa-apa, Bun! Namanya juga belajar hal baru tentang tubuh sendiri. Silakan intip kembali gambar anatomi dan panduan gerakan, lalu coba kuis ini lagi kapan saja ya.';
+      resultMessage.textContent = 'Tidak apa-apa, Bun! Namanya juga belajar hal baru tentang tubuh sendiri. Silakan tonton kembali video panduan gerakan dan baca bab anjuran, lalu coba kuis ini lagi kapan saja ya.';
     }
   }
 
