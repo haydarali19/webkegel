@@ -125,12 +125,22 @@
           </div>
         </div>
 
-        <!-- Daftar Bab Edukasi (7 Bab Pembahasan) -->
+        <!-- Daftar Bab Edukasi (8 Bab Pembahasan: Seimbang 4 di Atas, 4 di Bawah) -->
         <div class="chapter-index-section">
-          <span class="section-label">Daftar Isi Pembahasan</span>
+          <span class="section-label">Daftar Isi Pembahasan (8 Bab Edukasi)</span>
           
           <div class="chapter-index-grid">
             
+            <a href="#beranda" class="chapter-card-link" data-target-tab="beranda">
+              <div class="chapter-card-header">
+                <span class="card-num">Bab 01</span>
+                <span class="card-tag">Pengantar</span>
+              </div>
+              <h3>Pengenalan Modul</h3>
+              <p>Panduan awal edukasi kesehatan panggul dan pengenalan senam Kegel bagi ibu hamil.</p>
+              <div class="card-action-text">Mulai dari awal &rarr;</div>
+            </a>
+
             <a href="#inkontinensia" class="chapter-card-link" data-target-tab="inkontinensia">
               <div class="chapter-card-header">
                 <span class="card-num">Bab 02</span>
@@ -167,7 +177,7 @@
                 <span class="card-tag">Video Praktik</span>
               </div>
               <h3>Video Panduan Gerakan</h3>
-              <p>Video peragaan senam Kegel bertahap dengan irama napas terpandu yang aman untuk ibu hamil.</p>
+              <p>Video peragaan senam Kegel bertahap bersama bidan profesional yang aman untuk ibu hamil.</p>
               <div class="card-action-text">Tonton video peragaan &rarr;</div>
             </a>
 
@@ -478,15 +488,34 @@
           </p>
         </div>
 
-        <!-- Kerangka Pemutar Video (Responsive Video Player Framework) -->
+        <!-- Ruang Pemutar Video Praktik -->
         <div class="video-sanctuary">
           
           <div class="video-framework-card">
-            <!-- HTML5 Video Player dengan Poster & Source -->
-            <video id="videoKegel" controls preload="metadata" poster="ibu-hamil.jpg">
-              <source src="video-kegel.mp4" type="video/mp4">
-              Browser Anda tidak mendukung pemutar video HTML5. Silakan putar video panduan senam Kegel secara langsung.
-            </video>
+            <!-- YouTube Video Embed Player -->
+            <iframe id="videoKegelIframe" 
+              src="https://www.youtube.com/embed/7RRdxxArYrk?enablejsapi=1&rel=0" 
+              title="Senam Kegel Trimester 3 || Bidan Novia, Amd, Keb - Medikacare" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <!-- Sumber Rujukan Video -->
+          <div class="video-source-caption">
+            <div class="video-source-info">
+              <span class="video-source-tag">Sumber Video</span>
+              <span><strong>Medikacare</strong> &bull; <em>"Senam Kegel Trimester 3 || Bidan Novia, Amd, Keb"</em></span>
+            </div>
+            <a href="https://youtu.be/7RRdxxArYrk?si=xK1U81XZeOc_PmQd" target="_blank" rel="noopener noreferrer" class="video-source-link">
+              Buka di YouTube
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
           </div>
 
           <!-- Capaian / Tahapan Menit Video (Timecodes) -->
@@ -497,7 +526,7 @@
             <div class="video-checkpoints-grid">
               <button type="button" class="checkpoint-chip" data-time="0">
                 <span class="checkpoint-time">00:00</span>
-                <span class="checkpoint-title">Persiapan &amp; Posisi Nyaman</span>
+                <span class="checkpoint-title">Persiapan &amp; Penjelasan</span>
               </button>
               <button type="button" class="checkpoint-chip" data-time="75">
                 <span class="checkpoint-time">01:15</span>
@@ -509,7 +538,7 @@
               </button>
               <button type="button" class="checkpoint-chip" data-time="210">
                 <span class="checkpoint-time">03:30</span>
-                <span class="checkpoint-title">Latihan Repetisi 5 Detik</span>
+                <span class="checkpoint-title">Latihan Repetisi Kontraksi</span>
               </button>
               <button type="button" class="checkpoint-chip" data-time="300">
                 <span class="checkpoint-time">05:00</span>

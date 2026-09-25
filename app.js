@@ -71,19 +71,42 @@ function initEditorialNavigation() {
    2. KERANGKA PEMUTAR VIDEO PANDUAN SENAM KEGEL
    ========================================================================== */
 function initVideoGuide() {
+  const iframe = document.getElementById('videoKegelIframe');
   const video = document.getElementById('videoKegel');
   const checkpointButtons = document.querySelectorAll('.checkpoint-chip');
 
-  if (!video || !checkpointButtons.length) return;
+  if (!checkpointButtons.length) return;
 
   checkpointButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const timeInSeconds = parseFloat(btn.dataset.time);
-      if (!isNaN(timeInSeconds)) {
+      if (isNaN(timeInSeconds)) return;
+
+      if (iframe) {
+        try {
+          iframe.contentWindow.postMessage(
+            JSON.stringify({
+              event: 'command',
+              func: 'seekTo',
+              args: [timeInSeconds, true]
+            }),
+            '*'
+          );
+          iframe.contentWindow.postMessage(
+            JSON.stringify({
+              event: 'command',
+              func: 'playVideo',
+              args: []
+            }),
+            '*'
+          );
+        } catch (err) {
+          // Fallback cross-origin
+        }
+        iframe.src = `https://www.youtube.com/embed/7RRdxxArYrk?enablejsapi=1&autoplay=1&start=${Math.floor(timeInSeconds)}`;
+      } else if (video) {
         video.currentTime = timeInSeconds;
-        video.play().catch(() => {
-          // Abaikan jika browser memblokir pemutaran otomatis sebelum interaksi langsung pada player
-        });
+        video.play().catch(() => {});
       }
     });
   });
