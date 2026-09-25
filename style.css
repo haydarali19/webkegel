@@ -1331,6 +1331,47 @@ main {
   color: var(--color-rose-deep);
 }
 
+/* Chapter In-text Citation Box */
+.chapter-source-citation {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  background-color: var(--color-sand-soft);
+  border-left: 3px solid var(--color-sage);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.chapter-source-citation .source-icon {
+  color: var(--color-sage);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.chapter-source-citation .source-content {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+.chapter-source-citation .source-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-sage);
+  margin-bottom: 0.25rem;
+}
+
+.chapter-source-citation p {
+  font-size: 0.88rem;
+  margin-bottom: 0;
+  color: var(--color-text-main);
+}
+
 /* References Section */
 .bibliotheque-grid {
   display: grid;

@@ -2,7 +2,7 @@
  * STIKES RSPAD Gatot Soebroto
  * Media Edukasi Digital Senam Kegel Ibu Hamil
  * Skrip Logika:
- * 1. Navigasi Bab & Perpindahan Halaman Halus (7 Bab)
+ * 1. Navigasi Bab & Perpindahan Halaman Halus (8 Bab)
  * 2. Kerangka Interaktif Pemutar Video Panduan Latihan
  * 3. Kuis Evaluasi Pemahaman Mandiri
  */
