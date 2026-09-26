@@ -1073,13 +1073,14 @@ main {
 }
 
 /* ==========================================================================
-   BAB 06: ANJURAN & PANTANGAN
+   BAB 06: HAL YANG PERLU DIHINDARI & TANDA BAHAYA
    ========================================================================== */
 .advice-columns-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-bottom: 3rem;
+  align-items: stretch;
 }
 
 .advice-journal-col {
@@ -1087,6 +1088,8 @@ main {
   border: 1px solid var(--color-sand-border);
   border-radius: var(--radius-md);
   padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .col-header-row {
@@ -1135,30 +1138,36 @@ main {
   background-color: #FCF4F2;
   border: 1px solid #F5D3CE;
   border-radius: var(--radius-md);
-  padding: 2rem 2.2rem;
-}
-
-.caution-header {
+  padding: 2.2rem 1.8rem;
   display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  flex-direction: column;
 }
 
-.caution-header h3 {
-  font-size: 1.3rem;
+.clinical-caution-card .col-header-row {
+  border-bottom-color: #F5D3CE;
+}
+
+.clinical-caution-card .col-header-row h3 {
   color: #9C3328;
 }
 
+.caution-intro-text {
+  font-size: 0.94rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
 .caution-bullets {
-  padding-left: 1.5rem;
+  padding-left: 1.35rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.1rem;
 }
 
 .caution-bullets li {
   font-size: 0.94rem;
+  line-height: 1.6;
   color: var(--color-text-main);
 }
 

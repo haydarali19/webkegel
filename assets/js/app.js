@@ -181,37 +181,37 @@ function initVideoGuide() {
 function initStationeryQuiz() {
   const quizData = [
     {
-      question: "Mengapa ibu hamil pada trimester 2 dan 3 lebih mudah mengalami keluarnya tetesan air kencing saat batuk atau tertawa?",
+      question: "Apa yang dimaksud dengan inkontinensia urine?",
       choices: [
-        "Karena konsumsi air putih ibu hamil terlalu banyak.",
-        "Pengaruh hormon relaksin yang melunakkan katup kemih serta beban rahim yang menekan kandung kemih dari atas.",
-        "Karena posisi kandung kemih berpindah tempat.",
-        "Akibat ibu hamil terlalu sering berjalan kaki."
+        "Kesulitan untuk tidur",
+        "Keluarnya urine secara tidak terkendali",
+        "Peningkatan frekuensi makan",
+        "Nyeri pada kaki"
       ],
       correctIndex: 1,
-      midwifeNote: "Hormon relaksin melunakkan jaringan jalan lahir sekaligus membuat katup saluran kemih sedikit meregang. Bersamaan dengan membesarnya ukuran janin, tekanan mendadak seperti batuk atau tawa mudah memicu rembesan air seni bila otot panggul tidak dilatih."
+      midwifeNote: "Inkontinensia urine adalah kondisi keluarnya urine secara tidak terkendali, terutama saat terjadi peningkatan tekanan intra abdomen seperti saat batuk, bersin, atau tertawa akibat kelemahan sfingter uretra dan otot dasar panggul."
     },
     {
-      question: "Bagaimana cara merasakan kontraksi otot dasar panggul yang benar saat melakukan senam Kegel?",
+      question: "Apa tujuan utama senam Kegel?",
       choices: [
-        "Membayangkan sensasi menahan buang angin atau pipis (otot terangkat ke arah dalam), tanpa mengeraskan perut atau meremas paha.",
-        "Menahan napas kuat-kuat di tenggorokan lalu menekan perut ke arah bawah.",
-        "Menjepit kedua paha dan meremas pantat sekuat tenaga.",
-        "Menekan bagian pusar dengan kedua tangan sembari membungkuk."
+        "Menguatkan otot lengan",
+        "Menguatkan otot dasar panggul",
+        "Mengurangi tinggi badan",
+        "Melatih otot mata"
+      ],
+      correctIndex: 1,
+      midwifeNote: "Senam Kegel dirancang khusus dengan tujuan utama memperkuat otot-otot dasar panggul (pelvic floor muscles) guna mendukung organ panggul dan mencegah kebocoran urine."
+    },
+    {
+      question: "Mengapa tekanan intraabdomen dapat menyebabkan kebocoran urine?",
+      choices: [
+        "Mendorong kandung kemih",
+        "Mengurangi ukuran kandung kemih",
+        "Menghentikan kerja ginjal",
+        "Mengurangi tekanan pada panggul"
       ],
       correctIndex: 0,
-      midwifeNote: "Kunci senam Kegel yang tepat adalah mengisolasi otot dasar panggul. Dinding perut, paha, dan pantat harus tetap lemas. Bila perut mengeras atau paha menjepit, artinya Bunda masih menggunakan otot luar tubuh."
-    },
-    {
-      question: "Mengapa fase relaksasi (melepaskan otot) sama pentingnya dengan fase mengencangkan otot?",
-      choices: [
-        "Hanya agar waktu latihan terasa lebih santai.",
-        "Agar otot panggul tidak perlu dilatih secara rutin.",
-        "Agar otot tidak kaku berlebih dan tetap lentur saat membuka jalan lahir pada proses persalinan nanti.",
-        "Supaya ibu hamil bisa langsung tertidur setelah latihan."
-      ],
-      correctIndex: 2,
-      midwifeNote: "Otot panggul yang sehat adalah otot yang mampu mengencang kuat namun juga bisa membuka lebar secara rileks. Otot yang terus tegang kaku tanpa relaksasi justru dapat menyulitkan kepala bayi turun saat persalinan."
+      midwifeNote: "Peningkatan tekanan intra abdomen (seperti saat batuk, bersin, atau aktivitas fisik) memberikan dorongan kuat pada kandung kemih. Jika sfingter uretra atau otot dasar panggul lemah, dorongan ini memicu keluarnya urine tidak terkendali."
     },
     {
       question: "Manakah tindakan di bawah ini yang merupakan KESALAHAN dan TIDAK boleh dilakukan secara rutin?",
